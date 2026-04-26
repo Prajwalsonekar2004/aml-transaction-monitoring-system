@@ -2,25 +2,25 @@
 
 ## Project Overview
 
-This project simulates a real-world **Anti-Money Laundering (AML) system** used by financial institutions to detect suspicious transactions and high-risk customers.
+This project simulates a real-world **Anti-Money Laundering (AML) monitoring system** used by financial institutions to detect suspicious transactions and high-risk customers.
 
-The system processes large-scale transaction data, applies AML rules, generates risk scores, and visualizes insights through an interactive Power BI dashboard.
+It processes transaction data, engineers behavioral features in Python, applies AML rules, generates risk scores, and visualizes insights through a Power BI dashboard.
 
 ---
 
 ## Objective
 
-* Identify suspicious transaction patterns
-* Detect high-risk customers
-* Build a rule-based AML monitoring system
-* Provide actionable insights through dashboards
+* Detect suspicious transaction patterns
+* Identify high-risk customers
+* Build a rule-based AML detection system
+* Create an investigation-ready dashboard
 
 ---
 
 ## Tech Stack
 
-* **Python** – Data cleaning, preprocessing, AML logic
-* **SQL (PostgreSQL)** – Data storage, aggregation, feature engineering
+* **Python (Pandas)** – Data cleaning, feature engineering, AML logic
+* **PostgreSQL** – Data storage and querying
 * **Power BI** – Dashboard and visualization
 
 ---
@@ -29,33 +29,45 @@ The system processes large-scale transaction data, applies AML rules, generates 
 
 ### Data Processing
 
-* Cleaned and transformed large transaction dataset (~100K+ records)
-* Stored structured data in PostgreSQL
+* Cleaned and transformed transaction dataset
+* Handled missing values, duplicates, and data types
+* Loaded structured data into PostgreSQL
 
-### Feature Engineering (SQL)
+---
 
-* Transaction frequency per customer
-* Average and maximum transaction amount
-* Unique receiver count (layering detection)
-* Daily transaction spikes (burst detection)
+### Feature Engineering (Python)
+
+Created customer-level behavioral features:
+
+* Transaction count per customer
+* Average transaction amount
+* Maximum transaction amount
+* Unique receivers (layering detection)
+* Transactions per day (burst detection)
+
+---
 
 ### AML Rule Engine
 
-Implemented rule-based detection:
+Implemented rule-based fraud detection:
 
 * High-value transactions
 * High-frequency activity
-* Layering behavior
-* Burst transactions
+* Layering behavior (multiple receivers)
+* Burst transaction patterns
+
+---
 
 ### Risk Scoring System
 
-* Generated risk scores (0–100)
-* Classified customers into:
+* Generated risk score (0–100)
+* Categorized customers into:
 
   * High Risk
   * Medium Risk
   * Low Risk
+
+---
 
 ### Alert System
 
@@ -65,7 +77,7 @@ Implemented rule-based detection:
 
 ---
 
-## Dashboard Insights
+## Dashboard Highlights
 
 ### Executive Overview
 
@@ -73,16 +85,22 @@ Implemented rule-based detection:
 * High-risk and medium-risk customers
 * Risk distribution
 
+---
+
 ### Customer Behavior Analysis
 
-* Transaction volume vs amount
-* Risk-based behavioral patterns
+* Transaction volume vs average amount
+* Behavioral patterns across risk categories
+
+---
 
 ### AML Pattern Detection
 
 * Layering activity
 * Burst transactions
 * High-value transfers
+
+---
 
 ### Alert Monitoring
 
@@ -102,13 +120,13 @@ Dataset used from Kaggle: https://www.kaggle.com/datasets/ealtman2019/ibm-transa
 
 ### AML Overview
 
-![AML Overview](./screenshots/overview.png)
+![Overview](./screenshots/overview.png)
 
-### Customer Behavior Analysis
+### Customer Behavior
 
 ![Behavior](./screenshots/behavior.png)
 
-### AML Pattern Analysis
+### AML Patterns
 
 ![Patterns](./screenshots/patterns.png)
 
@@ -120,10 +138,10 @@ Dataset used from Kaggle: https://www.kaggle.com/datasets/ealtman2019/ibm-transa
 
 ## Key Learnings
 
-* Built end-to-end data pipeline (Python + SQL + BI)
-* Applied real-world AML detection logic
-* Designed scalable feature engineering using SQL
-* Created business-focused dashboards
+* Built end-to-end AML detection system
+* Applied real-world fraud detection logic
+* Designed behavioral features for risk analysis
+* Developed business-focused dashboards
 
 ---
 
@@ -140,14 +158,15 @@ This system helps financial institutions:
 ## How to Run
 
 1. Load dataset
-2. Clean data using Python
-3. Store data in PostgreSQL
-4. Run SQL scripts for feature engineering
-5. Load final table into Power BI
+2. Perform data cleaning in Python
+3. Engineer features using Pandas
+4. Store processed data in PostgreSQL
+5. Connect Power BI to database
+6. Build dashboard
 
 ---
 
-## 👤 Author
+## Author
 
 **Prajwal Sonekar**
 Aspiring Data Analyst | Fintech Enthusiast
