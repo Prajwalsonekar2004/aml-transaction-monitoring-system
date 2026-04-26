@@ -120,19 +120,15 @@ Dataset used from Kaggle: https://www.kaggle.com/datasets/ealtman2019/ibm-transa
 
 ### AML Overview
 
-![Overview](./screenshots/overview.png)
+![Overview](gitkeep/aml_overview.png)
 
 ### Customer Behavior
 
-![Behavior](./screenshots/behavior.png)
-
-### AML Patterns
-
-![Patterns](./screenshots/patterns.png)
+![Behavior](gitkeep/customer_behavior.png)
 
 ### Alert Monitoring
 
-![Alerts](./screenshots/alerts.png)
+![Alerts](gitkeep/alerts_monitoring.png)
 
 ---
 
